@@ -19,7 +19,7 @@ int main()
     // defined by class, so it is a empty string
 
     std::cout << local_int << std::endl;
-    // local_int is a local variable which is uninitialized. so it's value is undefined.
+    // local_int is a local variable which is uninitialized. so its' value is undefined.
 
     return 0;
 }

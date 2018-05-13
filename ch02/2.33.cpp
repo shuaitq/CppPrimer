@@ -26,10 +26,10 @@ int main()
     // illegal, d is a int *, we should use *d = 42
 
     e = 42;
-    // illegal, e is a const int *, we can't change it's value
+    // illegal, e is a const int *, we can't change its' value
 
     g = 42;
-    // illegal, g is a const int &, we can't change it's value
+    // illegal, g is a const int &, we can't change its' value
 
     return 0;
 }
