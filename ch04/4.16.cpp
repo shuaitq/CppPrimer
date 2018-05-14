@@ -28,7 +28,7 @@ int main()
     if(i == 1024)
     {
 
-    } 
+    }
     
     return 0;
 }
