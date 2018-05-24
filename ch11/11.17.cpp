@@ -1,24 +1,28 @@
 #include <iostream>
-#include <map>
+#include <set>
 #include <string>
-#include <utility>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
 int main()
 {
-    map<int, string> m;
+    multiset<string> c;
+    vector<string> v;
 
-    m[25] = "Tom";
+    // legal
+    copy(v.begin(), v.end(), inserter(c, c.end()));
 
-    auto it = m.begin();
+    // illegal, no push_back in multiset
+    // copy(v.begin(), v.end(), back_inserter(c));
 
-    it->second = "Jim";
+    // legal
+    copy(c.begin(), c.end(), inserter(v, v.end()));
 
-    for(const auto &p : m)
-    {
-        cout << p.first << ' ' << p.second << endl;
-    }
+    // legal
+    copy(c.begin(), c.end(), back_inserter(v));
+
 
     return 0;
 }

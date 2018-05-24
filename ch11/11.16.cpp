@@ -1,21 +1,24 @@
 #include <iostream>
 #include <map>
 #include <string>
-#include <vector>
 #include <utility>
 
 using namespace std;
 
 int main()
 {
-    // mapped_type = vector<int>
-    cout << (typeid(vector<int>) == typeid(map<int, vector<int>>::mapped_type)) << endl;
+    map<int, string> m;
 
-    // key_type = int
-    cout << (typeid(int) == typeid(map<int, vector<int>>::key_type)) << endl;
+    m[25] = "Tom";
 
-    // value_type = pair<const int, vector<int>>
-    cout << (typeid(pair<const int, vector<int>>) == typeid(map<int, vector<int>>::value_type)) << endl;
+    auto it = m.begin();
+
+    it->second = "Jim";
+
+    for(const auto &p : m)
+    {
+        cout << p.first << ' ' << p.second << endl;
+    }
 
     return 0;
 }
